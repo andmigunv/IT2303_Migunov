@@ -40,8 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _makePhoneCall() async {
-    final Uri phoneUri = Uri(scheme: 'tel', path: '+78612215881');
-    await launchUrl(phoneUri);
+    //final Uri phoneUri = Uri(scheme: 'tel', path: '+78612215881');
+    //await launchUrl(phoneUri);
+    final Uri mapUri = Uri.parse('https://kubsau.ru/university/contacts/');
+    await launchUrl(mapUri, mode: LaunchMode.externalApplication);
   }
 
   void _openRoute() async {
@@ -64,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Image.asset(
             'assets/images/20.jpg', 
-            height: 250,
+            height: 400,
             width: double.infinity,
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
